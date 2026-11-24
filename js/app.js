@@ -6,11 +6,8 @@
   const app = document.getElementById('app');
   const TABS = [
     ['home', 'Home'],
-    ['ga', 'Genetic Algorithm'],
     ['pso', 'PSO'],
     ['abc', 'Bee Colony'],
-    ['fuzzy', 'Fuzzy Logic'],
-    ['perceptron', 'Perceptron'],
     ['race', 'Race'],
     ['verify', 'Verification'],
   ];
@@ -41,31 +38,27 @@
     const card = (k, kind, title, text) => `<a class="panel card" href="#${k}"><span class="k">${kind}</span><h3>${title}</h3><p>${text}</p></a>`;
     const f = (t, d) => `<div class="panel"><h4>${t}</h4><p>${d}</p></div>`;
     return `<section class="hero"><div>
-        <h1>Soft computing, <em>one step at a time.</em></h1>
-        <p>SoftLab is an interactive lab for the algorithms in the Soft Computing course: genetic algorithms, particle swarms, bee colonies, fuzzy controllers and perceptrons. Pick a problem, change the parameters, then play, pause, step forward <i>and back</i> through the run. Every step comes with a plain-language explanation and the full arithmetic with the numbers filled in.</p>
+        <h1>Swarm intelligence, <em>one step at a time.</em></h1>
+        <p>SoftLab is an interactive lab for swarm intelligence: particle swarm optimisation and the artificial bee colony. Pick a problem, change the parameters, then play, pause, step forward <i>and back</i> through the run. Every step comes with a plain-language explanation and the full arithmetic with the numbers filled in.</p>
         <p style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><a class="btn primary" href="#pso" style="text-decoration:none">Start with PSO →</a><a class="btn" href="#verify" style="text-decoration:none">See the textbook checks</a></p>
       </div><canvas data-hero></canvas></section>
       <h2 class="sec-title">Modules</h2>
       <div class="cards">
-        ${card('ga', 'Evolutionary', 'Genetic Algorithm + Schema Theorem', 'Roulette, tournament and rank selection, crossover and mutation, filled into the classic hand table. Track any schema and test Holland’s bound live.')}
         ${card('pso', 'Swarm', 'Particle Swarm Optimisation', 'See each velocity split into inertia, cognitive and social arrows. gbest and ring topologies, five landscapes.')}
         ${card('abc', 'Swarm', 'Artificial Bee Colony', 'Employed, onlooker and scout bees, one bee at a time, with the waggle-dance probabilities drawn as bars.')}
-        ${card('fuzzy', 'Fuzzy', 'Mamdani Fuzzy Controller', 'The washing-machine controller: fuzzify, fire nine rules, aggregate, defuzzify. Includes the full control surface.')}
-        ${card('perceptron', 'Neural', 'Perceptron Learning', 'Watch the decision line move after each mistake. Draw your own data; see why XOR breaks a single neuron.')}
-        ${card('race', 'Compare', 'Algorithm Race', 'PSO vs ABC vs GA on one landscape, compared fairly per function evaluation.')}
+        ${card('race', 'Compare', 'Swarm Race', 'PSO vs ABC on one landscape, compared fairly per function evaluation.')}
       </div>
       <h2 class="sec-title">What makes SoftLab different</h2>
       <div class="feat">
-        ${f('📖 Textbook mode with automatic checks', 'One click loads the exact numbers from the course material (PSO handout, ABC slides, Deb’s GA table, the lecture x² example). SoftLab replays them and compares every printed value. It found real arithmetic slips in the sources and shows the independent recalculation.')}
+        ${f('📖 Textbook mode with automatic checks', 'One click loads the exact numbers from the course material (the PSO step-by-step handout and the ABC solved example). SoftLab replays them and compares every printed value. It found real arithmetic slips in the sources and shows the independent recalculation.')}
         ${f('🧮 A live “hand calculation” tape', 'Every step prints the formula and then the same formula with this step’s numbers substituted, exactly as you would write it in an exam.')}
         ${f('⏪ Step backwards', 'The full state is snapshotted every step, so you can rewind a confusing moment instead of restarting.')}
-        ${f('🧬 Schema theorem tracker', 'Type any schema like 1*0** and compare the theorem’s predicted lower bound with the actual count, generation by generation.')}
         ${f('🏹 Velocity decomposition', 'PSO moves are drawn as three coloured arrows laid tip to tail, so you can see whether memory or peer pressure is winning.')}
         ${f('🎲 Seeded randomness', 'Every run is reproducible from its seed. Change one parameter, keep the seed, and compare like for like.')}
       </div>
       <h2 class="sec-title">Keyboard</h2>
       <p class="vsum"><kbd>Space</kbd> play / pause · <kbd>→</kbd> step · <kbd>←</kbd> step back · <kbd>R</kbd> reset</p>
-      <footer class="foot">SoftLab · built for the Soft Computing course (B.Tech IT, 5th semester) · runs entirely in your browser, no data leaves the page.</footer>`;
+      <footer class="foot">SoftLab · built for the Soft Computing course (B.Tech IT, 5th semester), swarm intelligence unit · runs entirely in your browser, no data leaves the page.</footer>`;
   }
 
   /* little live swarm in the hero */

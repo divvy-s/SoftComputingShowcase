@@ -1,7 +1,7 @@
 /* Runs every textbook / hand-calculation check headlessly.
  * Usage: node tests/run-verification.js      (exit code 1 if any check fails) */
 const path = require('path');
-const files = ['core.js', 'engines/pso.js', 'engines/abc.js', 'engines/ga.js', 'engines/fuzzy.js', 'engines/perceptron.js', 'engines/race.js', 'verify.js'];
+const files = ['core.js', 'engines/pso.js', 'engines/abc.js', 'engines/race.js', 'verify.js'];
 for (const f of files) require(path.join(__dirname, '..', 'js', f));
 const SC = globalThis.SC;
 
@@ -22,12 +22,6 @@ const smoke = [
   ['pso', { topology: 'ring', gran: 'iteration' }],
   ['abc', {}],
   ['abc', { gran: 'cycle' }],
-  ['ga', {}],
-  ['ga', { sel: 'tournament' }],
-  ['ga', { sel: 'rank', problem: 'quad', L: 8 }],
-  ['fuzzy', { gran: 'stage', defuzz: 'mom' }],
-  ['perceptron', { data: 'xor' }],
-  ['perceptron', { data: 'blobs' }],
   ['race', { budget: 600 }],
 ];
 for (const [k, p] of smoke) {

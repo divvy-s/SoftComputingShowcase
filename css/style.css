@@ -163,9 +163,6 @@ table.data td { padding: 5px 8px; border-bottom: 1px solid var(--line); font-fam
 table.data tr.cur td { background: var(--accent-soft); }
 table.data tr.best td:first-child { box-shadow: inset 3px 0 var(--good); }
 table.data tr.upd td { background: var(--warn-soft); }
-.bits b { color: var(--bad); }
-.bits .cut { color: var(--accent); font-weight: 700; }
-.bits .sch { text-decoration: underline; text-decoration-color: var(--good); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 
 /* bars (ABC dance floor) */
 .bars { display: grid; gap: 4px; }
@@ -174,18 +171,6 @@ table.data tr.upd td { background: var(--warn-soft); }
 .bar .fill { position: absolute; inset: 0 auto 0 0; background: var(--honey); opacity: 0.85; }
 .bar .r { position: absolute; top: -2px; bottom: -2px; width: 2px; background: var(--ink); }
 .bar.hit .track { outline: 2px solid var(--accent); }
-
-/* fuzzy */
-.fz-in { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media (max-width: 700px) { .fz-in { grid-template-columns: 1fr; } }
-.rulegrid { display: grid; grid-template-columns: 70px repeat(3, 1fr); gap: 4px; font-size: 12px; }
-.rulegrid div { padding: 7px 6px; border-radius: 6px; text-align: center; background: var(--panel-2); border: 1px solid var(--line); position: relative; overflow: hidden; }
-.rulegrid .h { background: transparent; border-color: transparent; color: var(--muted); font-weight: 600; }
-.rulegrid .cell .fillh { position: absolute; left: 0; right: 0; bottom: 0; background: var(--accent); opacity: 0.18; }
-.rulegrid .cell.on { outline: 2px solid var(--accent); }
-.rulegrid .cell.zero { color: var(--faint); }
-.rulegrid .cell span { position: relative; }
-.rulegrid .cell em { display: block; font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--muted); position: relative; }
 
 /* verify */
 .verify { padding: 14px; margin-top: 14px; }
@@ -210,18 +195,8 @@ details.theory .th { columns: 2 340px; column-gap: 28px; margin-top: 8px; color:
 details.theory .th p, details.theory .th ul { margin: 0 0 10px; break-inside: avoid; }
 details.theory .f { font-family: var(--mono); font-size: 12.5px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; display: block; margin: 4px 0 10px; break-inside: avoid; }
 
-/* schema panel */
-.schema-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-.schema-row input { font-family: var(--mono); font-size: 16px; letter-spacing: 0.15em; width: 260px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel-2); }
-.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin: 10px 0; }
-.kv div { background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 9px; }
-.kv b { display: block; font-family: var(--mono); font-size: 15px; }
-.kv span { font-size: 11px; color: var(--muted); }
-.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
-@media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
-
 /* race */
-.race3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.race3 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 @media (max-width: 760px) { .race3 { grid-template-columns: 1fr; } }
 .race3 h4 { font-size: 13px; display: flex; justify-content: space-between; margin-bottom: 4px; }
 .race3 h4 span { font-family: var(--mono); font-weight: 500; color: var(--muted); font-size: 12px; }
